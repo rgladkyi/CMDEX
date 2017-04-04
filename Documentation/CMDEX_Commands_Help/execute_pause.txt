@@ -1,0 +1,1 @@
+execute_pause <command [parameter 1] [parameter 2] ...> - Execute entered command and then wait for pressing any key.

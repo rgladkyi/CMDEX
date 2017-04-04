@@ -1,0 +1,2 @@
+altdrag - Open Altdrag solution: Enable Alt + Mouse_Click_Move to move the windows on the screen, like in Linux.
+	Reference: https://stefansundin.github.io/altdrag/

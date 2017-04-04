@@ -1,0 +1,10 @@
+make - MinGW GCC make.
+	Reference: www.mingw.org
+	For example:
+		> cd My_C_Projects\
+		> echo make: > Makefile
+		> echo <TAB> gcc main.c -o main.exe > Makefile
+		> make
+		... To make 'main.c' source code.
+		> main.exe
+		... Rund builded programm.

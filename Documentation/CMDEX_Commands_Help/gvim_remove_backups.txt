@@ -1,0 +1,1 @@
+gvim_remove_backups - Clear all files that contains symbol '~' in the end of name. ;

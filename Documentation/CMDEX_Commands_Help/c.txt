@@ -1,0 +1,1 @@
+c - Alias to 'cd /d' with 'pushd' to save current directory in stack. Execute 'back' (or alias 'b') to go directory back.

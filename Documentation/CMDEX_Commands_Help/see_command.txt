@@ -1,0 +1,19 @@
+see_command <"command [param_1] .. [param_3]"> <execute_command>  - Execute "command [param_1] .. [param_3]" and put the 
+	console output of that into <execute_command>.
+	For example:
+		see_command "dir /s /b" echo
+		C:\CMDEX\Interfaces\7zip.bat
+		C:\CMDEX\Interfaces\admin.bat
+		C:\CMDEX\Interfaces\ADMIN.lnk
+		...
+	Or:
+		see_command "dir /s /b" "dir /n"
+		...
+		02/07/2017  03:39 PM                80 7zip.bat
+		1 File(s)             80 bytes
+		0 Dir(s)   1,420,324,864 bytes free
+
+		02/07/2017  03:39 PM                80 admin.bat
+		1 File(s)             80 bytes
+		0 Dir(s)   1,420,324,864 bytes free
+	    ...

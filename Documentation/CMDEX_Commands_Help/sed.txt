@@ -1,0 +1,2 @@
+sed <options> <input_file> ... - File Stream Editor, as in Linux cmd. Used for search/replace text in files.
+	Reference: http://gnuwin32.sourceforge.net/

@@ -1,0 +1,1 @@
+history - Print history of executed commands. The same list can be viewed by pressing 'F7' button in Windows CMD.

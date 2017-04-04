@@ -1,0 +1,101 @@
+
+If the shortcuts were created on the desktop, you can use the hot-keys to open the CMDEX.
+After installation it's need to reboot computer. First times, the it's need to wait for 5 - 10 seconds.
+
+		Press <Ctrl+Shift+F11> to open CMDEX window 1.
+		Press <Ctrl+Shift+F12> to open ADMIN window 1.
+		Press <Ctrl+Shift+F10> to open CMDEX window 2.
+		Press <Ctrl+Shift+F9>  to open ADMIN window 2.
+
+You can swich between those windows by pressing this hot-keys. This is global hooks.
+
+alias		Add alias <alias_name> for <command>.
+altdrag		Enable Alt+mouse_click_move to move the windows on the screen. Very comfortable.
+b		Alias to 'popd'. Go directory back. Used with 'c' command.
+cat		Print the text file. Alias to 'type' in windows cmd.
+cp		Copy the file. Alias to 'copy' in wondows cmd. 
+c		Alias to 'cd' and 'pushd'. Change directory and save previous directory location to ba able come back with 'b' command. 
+deldir		Delete directory. Alias to 'rmdir /s' in windows cmd.
+desktop		Open Desktop directory in Windows explorer.
+diff		Show differences between <file_1> and <file_2> in text represantation. 
+gd		Gvim diff tool.
+gdiff		Alias to 'WinMerge'
+ditto		Open 'Ditto' clipboard manager. Could be executed by pressing global hotkey 'Ctrl + ~'.
+drives		Show information aboud drives: Shows dist partition and removable devices.
+edge		Open Microsoft Edge Browser.
+end		Exit the console, and save commands history into 'History' folder.
+execute_pause	Execute entered command and then wait for pressing any key.
+g		Shortcut to open GVIM editor. Can be use to open existing or create new file.
+grep		Search text in file/files. Alias to the Linux 'grep' command (Taken from GnuWin32 project).
+gvim		GVIM editor for Windows. Open GVIM, and, after closing GVIM, execute 'gvim_remove_backups' (clear all gvim temp files). 
+gvim_remove_backups	Clear all files that contains symbol '~' in the end of name. ;
+history		Print history of executed commands. The same list can be viewed by pressing 'F7' button in Windows CMD.
+home		Change current directory to user home direcory (For example, "C:\Users\<UserName>\")
+downloads	Change current directory into user 'Downloads' directory.
+i		Change current directory to folder with scripts.
+indexate	Print list of full paths, all files, in all sub-directories.
+la		Print current or specific directory content. Sorted by name.
+ls		Print current or specific directory content. Sorted by size.
+ld		Print current or specific directory content. Sorted by date.
+ll		Print current or specific directory content as list (without additional informations). Sorted by name.
+lr		Print current or specific directory content and all subdirectories, as list of paths
+		(without additional informations). Sorted by path name.
+make		MinGW GCC make.
+gcc		MinGW GCC compiler.		
+mirror		Change current direcory into 'C:\CMDEX\Mirror'. In this directory should be a list of void files
+		commands to execute. This file named the same as in commands, but without '.bat'
+		Used as interface to find a command by pressing <Tab>.
+mv		Move/rename file. Alias to move.
+n		Open 'notepad' (embeded inti windows). Alias to 'notepad'.
+np		Open 'Notepad++' editor.
+opengoogle	Open Google search in default web browser.
+paint		Open MS Paint (embeded into windows).
+pf		Change directory to "Program Files".
+pf86		Change directory to "Program Files (x86)"
+pin		Pin some folder path to the 'C:\CMDEX\Wall' folder.
+unpin		Remove <name>.bat from 'Wall'.
+wall		Open specific attachment, or open 'C:\CMDEX\Wall' folder.
+play		Play the mp3 media files from comand line.
+pwd		Print current directory. Alias to 'echo %cd%' or 'cd'.
+findx		Find strings (regex) <string_1> or <string_2> or <string_n> of all files in all sub-directories under <path_to_find>
+		Regex is enabled. To find without regex, use standart 'findstr' (usage can be taken from 'findx.bat')
+f		Alias to 'findx' command.
+findfile	Find files names that conatains <filename> in all sub-directories. Can be part of filename.
+ff		Alias to 'findfile' command.
+findin		Find <string_1> or [string_2] or ... [string_n] in specific file <path_to_find>
+		or folders under <path_to_find>.
+fi		Alias to 'findin' command.
+sudo		Execute command as Administrator.
+		Note: Currently there is limit of 7 input parameters.
+rt		Alias to 'sudo' command.
+su		Alias to 'sudo' command.
+run		Find command by tokek and then run it.
+r		Alias to 'run'.
+run_externally	Execute <command> with parameters [param_1] .. [param_7] (optional) in <directory_where_run>
+		Note: Currently there is limit of 7 input parameters.
+save_history	Save all executed commands in "C:\CMDEX\History" folder in file, named '<date> <time>.log'.
+sed		File Stream Editor, as in Linux cmd. Used for search/replace text in files.
+see_command	Execute "command [param_1] .. [param_3]" and put the console output of that into <execute_command>.  
+process		Alias to 'see_command'.		
+execute_string	Execute <command> with <parameters> inside "". Can be used as way to execute command as parameter inside other command.
+getweb		Get Web resource using 'wget'. Paramere '-O <file_name>' used to save resource to specific file <file_name>.
+		Note: Currenty, there is problems with Unicode web page encoding.
+tag		Recursively find the files and folder that contains symbol '#'.
+here		Open current CMD path in Windows Explorer.
+trash		Open 'Trash Bin' folder in Windows Explorer.
+vim		Open VI editor (console mode).
+wget		Download web page located by <URL>.
+		Note: On HTTPS connections is need to use '--user-agent="Chrome" --no-check-certificate' to establish the connection.
+		Regarding to encoding: Wget uses ASCII, and there will be problem with the Unicode in example above.		
+windirstat	Execute WinDirStat. Can be used to find which folder or file is taken a lot of disk memory. (Windows Memory Statistic)
+		Can be used when no space left on HDD.
+winmerge	Execute WinMerge. Can be used show differences between two files <path_1>, <path_2> of two directories <path_1>, <path_2>.
+vd		Alias to 'vim diff' tool.
+helpx		Show all commands description of execute '--help' or '/?' for specific command.
+		Note: Prints some reduntand information, but basically could be used.
+q		Alias to 'cd ..'		go 1 directory up.
+qq		Alias to 'cd ..\..'		go 2 directory up.
+qqq		Alias to 'cd ..\..\..'		go 3 directory up.
+cmdextrash	Change directory to one with files, removed by 'mvtrash'.
+
+For more informatin and references, see: "C:\CMDEX\Documentation\CMDEX_commands.txt"

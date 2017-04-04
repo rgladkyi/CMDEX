@@ -1,0 +1,2 @@
+gvim <file|params> - GVIM editor for Windows. Open GVIM, and, after closing GVIM, execute 'gvim_remove_backups' (clear all gvim temp files). 
+	Reference: http://www.vim.org

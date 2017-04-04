@@ -1,0 +1,10 @@
+indexate - Print list of full paths, all files, in all sub-directories.
+	For example, save all indexes in indexes.txt:
+		cd C:\CMDEX
+		indexate > indexes.txt
+	The indexes.txt should contain something like this:
+		...
+		C:\CMDEX\Readme.txt
+		C:\CMDEX\Interfaces\diff.bat
+		C:\CMDEX\Interfaces\downloads.bat
+		...

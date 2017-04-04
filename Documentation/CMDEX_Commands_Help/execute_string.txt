@@ -1,0 +1,9 @@
+execute_string <"<command> [param_1] ... [param_n]"> - Execute <command> with <parameters> inside "".
+	Can be used as way to execute command as parameter inside other command.
+	For example:
+		execute_string "dir /s /b"
+		...
+		C:\CMDEX\Interfaces\7zip.bat
+		C:\CMDEX\Interfaces\admin.bat
+		C:\CMDEX\Interfaces\ADMIN.lnk
+		...

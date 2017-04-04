@@ -1,0 +1,2 @@
+g <file|parameters> - Shortcut to open GVIM editor.	Can be use to open existing or create new file.
+	Reference: http://www.vim.org

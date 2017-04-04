@@ -1,0 +1,9 @@
+@echo off
+
+set EXECUTE_COMMAND=%1
+REM Remove all " " symbols.
+set EXECUTE_COMMAND_UNWRAPPED=%EXECUTE_COMMAND:"=%
+
+%EXECUTE_COMMAND_UNWRAPPED%
+
+

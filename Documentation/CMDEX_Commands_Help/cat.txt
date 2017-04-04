@@ -1,0 +1,1 @@
+cat <file_name> - Print the text file. Alias to 'type' in windows cmd.

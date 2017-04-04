@@ -1,0 +1,14 @@
+
+REM In 'neq []' means that there is something.
+REM if [%*] neq [] (set unique_token=%*) else (set /p unique_token="Enter something unique: ")
+
+REM set name=...%unique_token%.uniq
+
+dir %*
+REM 'errorlevel' is '0' in case of successfull eecution of previous command. Otherwise it's '1'.
+if errorlevel neq 0 (echo. > %* && dir %*)
+
+
+
+
+

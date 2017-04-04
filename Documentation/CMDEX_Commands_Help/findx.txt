@@ -1,0 +1,22 @@
+findx <string_1> [string_2] ... - Find strings (regex) <string_1> or <string_2> or <string_n> of all files in all sub-directories under <path_to_find>
+	Regex is enabled. To find without regex, use standart 'findstr' (usage can be taken from 'findx.bat')
+	Note: This is alias to 'findin' with specified <path_to_find> parameter as '*' all files.
+	For example:
+		> findex findfile
+		...
+		Documentation\CMDEX_comands.txt:findfile <filename> - Find files names that conatains <filename> in all sub-directories. Can be part of filename.
+		Interfaces\test.txt:findfile.bat
+		Tools\MinGW\include\shlwapi.h:WINSHLWAPI LPSTR WINAPI PathFindFileNameA(LPCSTR);
+		Tools\MinGW\include\shlwapi.h:WINSHLWAPI LPWSTR WINAPI PathFindFileNameW(LPCWSTR);
+		Tools\MinGW\include\shlwapi.h:#define PathFindFileName PathFindFileNameW
+		...
+	Or:
+		> findx dir drivepath
+		...
+		add.bat:10:dir %drivePath%
+		add.bat:12:if errorlevel neq 0 mkdir %drivePath%
+		create_unique_file.bat:9:dir %name%
+		deldir.bat:15:call rmdir /s %*
+		EndUserStart.bat:2:rem set currentDirectory=%cd%
+		
+f <string_1> [string_2] ... - Alias to 'findx' command.

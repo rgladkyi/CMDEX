@@ -1,0 +1,13 @@
+getweb <URL> [params] - Get Web resource using 'wget'. Paramere '-O <file_name>' used to save resource to specific file <file_name>.
+	For example:
+		> getweb "https://www.google.com.ua/search?q=weather london"
+		... saved as "search@q=weather london"
+		> cat "search@q=weather london"
+	Or:
+		> getweb "https://www.google.com.ua/search?q=weather london" -O "weather.html"
+		> cat "weather.html"
+	Or:
+		> getweb "https://www.somesiteurl.com/FILE_TO_DOWNLOAD.zip"
+		> 7zip x FILE_TO_DOWNLOAD.zip
+	Note:
+		Currenty, there is problems with Unicode web page encoding.

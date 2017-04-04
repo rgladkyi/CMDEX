@@ -1,0 +1,1 @@
+cp <file_to_copy> <where_to_copy> - Copy the file. Alias to 'copy' in wondows cmd. 

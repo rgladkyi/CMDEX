@@ -1,0 +1,10 @@
+ff <filename> - Alias to 'findfile' command.
+
+findfile <filename> - Find files names that conatains <filename> in all sub-directories. Can be part of filename.
+	For example:
+		C:\CMDEX\Interfaces>findfile get
+		...
+		C:\CMDEX\Interfaces\getdisks.bat
+		C:\CMDEX\Interfaces\get_os_architecture.bat
+		C:\CMDEX\Interfaces\wget.bat
+		...

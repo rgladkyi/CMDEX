@@ -1,0 +1,4 @@
+gcc <file|parameters> - Shortcut to MinGW GCC compiler.
+	Reference: http://www.mingw.org
+	For example, to compile main.c:
+		> gcc main.c -o main.exe

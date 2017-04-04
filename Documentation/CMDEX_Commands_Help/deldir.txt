@@ -1,0 +1,1 @@
+deldir <directory_name> - Delete directory. Alias to 'rmdir /s' in windows cmd.

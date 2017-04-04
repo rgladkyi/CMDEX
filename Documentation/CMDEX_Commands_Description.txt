@@ -1,0 +1,84 @@
+
+alias <alias_name> <command [parameter 1] [parameter 2] ...> - Add alias <alias_name> for <command>.
+altdrag - Enable Alt+mouse_click_move to move the windows on the screen. Very comfortable.
+cat <file_name> - Print the text file. Alias to 'type' in windows cmd.
+cp <file_to_copy> <where_to_copy> - Copy the file. Alias to 'copy' in wondows cmd. 
+dbg - Go to directory with commands.
+deldir <directory_name> - Delete directory. Alias to 'rmdir /s' in windows cmd.
+desktop - Open Desktop directory in Windows explorer.
+diff <file_1> <file_2> - Show differences between <file_1> and <file_2> in text represantation. 
+drives - Show information aboud drives: Shows dist partition and removable devices.
+end - Exit the console, and save commands history into 'History' folder.
+execute_pause <command [parameter 1] [parameter 2] ...> - Execute entered command and then wait for pressing any key.
+g <file|parameters> - Shortcut to open GVIM editor.	Can be use to open existing or create new file.
+grep <params> - Search text in file/files. Alias to the Linux 'grep' command (Taken from GnuWin32 project).
+gvim <file|params> - GVIM editor for Windows. Open GVIM, and, after closing GVIM, execute 'gvim_remove_backups' (clear all gvim temp files). 
+gvim_remove_backups - Clear all files that contains symbol '~' in the end of name. ;
+history - Print history of executed commands. The same list can be viewed by pressing 'F7' button in Windows CMD.
+home - Change current directory to user home direcory (For example, "C:\Users\<UserName>\")
+downloads - Change current directory into user 'Downloads' directory.
+i - Change current directory to folder with scripts.
+indexate - Print list of full paths, all files, in all sub-directories.
+la - Print current or specific directory content. Sorted by name.
+ls - Print current or specific directory content. Sorted by size.
+ld - Print current or specific directory content. Sorted by date.
+ll - Print current or specific directory content as list (without additional informations). Sorted by name.
+lr - Print current or specific directory content and all subdirectories, as list of paths
+	(without additional informations). Sorted by path name.
+make - MinGW GCC make.
+gcc <file|parameters> - Shortcut to MinGW GCC compiler.	
+mirror - Change current direcory into 'C:\CMDEX\Mirror'. In this directory should be a list of void files - commands to execute.
+	This file named the same as in commands, but without '.bat'
+	Used as interface to find a command by pressing <Tab>.
+mv <path_to_rename> <new_path_name> - Move/rename file. Alias to move.
+n - Open 'notepad' (embeded inti windows). Alias to 'notepad'.
+np - Open 'Notepad++' editor.
+opengoogle - Open Google search in default web browser.
+paint - Open MS Paint (embeded into windows).
+pf - Change directory to "Program Files".
+pf86 - Change directory to "Program Files (x86)"
+pin <name> - Pin some folder path to the 'C:\CMDEX\Wall' folder.
+unpin <name> - Remove <name>.bat from 'Wall'.
+wall [name_of_attachment] - Open specific attachment, or open 'C:\CMDEX\Wall' folder.
+play <mp3_file> - Play the mp3 media files from comand line.
+pwd - Print current directory. Alias to 'echo %cd%' or 'cd'.
+e - Alias to 'cd ..' - go directory up.
+findx <string_1> [string_2] ... - Find strings (regex) <string_1> or <string_2> or <string_n> of all files in all sub-directories under <path_to_find>
+	Regex is enabled. To find without regex, use standart 'findstr' (usage can be taken from 'findx.bat')
+f <string_1> [string_2] ... - Alias to 'findx' command.
+findfile <filename> - Find files names that conatains <filename> in all sub-directories. Can be part of filename.
+ff <filename> - Alias to 'findfile' command.
+findin <string_1> [string_2] ... <path_to_find> - Find <string_1> or [string_2] or ... [string_n] in specific file <path_to_find>
+	or folders under <path_to_find>.
+fi <string_1> [string_2] ... <filename> - Alias to 'findin' command.
+sudo <command> [param_1] ... [param_7] - Execute command as Administrator.
+	Note: Currently there is limit of 7 input parameters.
+rt <command> [param_1] ... [param_7] - Alias to 'sudo' command.
+su <command> [param_1] ... [param_7] - Alias to 'sudo' command.
+run_externally <directory_where_run> <command> [param_1] ... [param_7] -  Execute <command> with parameters [param_1] .. [param_7] (optional)
+	in <directory_where_run>
+	Note: Currently there is limit of 7 input parameters.
+save_history - Save all executed commands in "C:\CMDEX\History" folder in file, named '<date> <time>.log'.
+sed <options> <input_file> ... - File Stream Editor, as in Linux cmd. Used for search/replace text in files.
+see_command <"command [param_1] .. [param_3]"> <execute_command> - Execute "command [param_1] .. [param_3]" and put the 
+	console output of that into <execute_command>.
+process <"command [param_1] .. [param_3]"> <execute_command> - Alias to 'see_command'.		
+execute_string <"<command> [param_1] ... [param_n]"> - Execute <command> with <parameters> inside "".
+	Can be used as way to execute command as parameter inside other command.
+getweb <URL> [params] - Get Web resource using 'wget'. Paramere '-O <file_name>' used to save resource to specific file <file_name>.
+	Note:
+		Currenty, there is problems with Unicode web page encoding.
+tag [token] - Recursively find the files and folder that contains symbol '#'.
+here - Open current CMD path in Windows Explorer.
+trash - Open 'Trash Bin' folder in Windows Explorer.
+vim - Open VI editor (console mode).
+wget [params] <URL> - Download web page located by <URL>.
+	Note: On HTTPS connections is need to use '--user-agent="Chrome" --no-check-certificate' to establish the connection.
+		Regarding to encoding: Wget uses ASCII, and there will be problem with the Unicode in example above.		
+windirstat [path] - Execute WinDirStat. Can be used to find which folder or file is taken a lot of disk memory. (Windows Memory Statistic)
+	Can be used when no space left on HDD.
+winmerge <path_1> <path_2> - Execute WinMerge. Can be used show differences between two files <path_1>, <path_2> of two directories <path_1>, <path_2>.
+helpx [command] - Show all commands description of execute '--help' or '/?' for specific command.
+	Note: Prints some reduntand information, but basically could be used.
+For more informatin see: "C:\CMDEX\Documentation\CMDEX_commands.txt"
+q Alias to 'e' means alias to 'cd 

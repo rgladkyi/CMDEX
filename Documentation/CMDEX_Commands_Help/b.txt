@@ -1,0 +1,1 @@
+b - Alias to 'back'. Execute 'popd' to go directory back (work if using 'c' command instead of standart 'cd')

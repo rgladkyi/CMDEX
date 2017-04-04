@@ -1,0 +1,1 @@
+tag [token] - Recursively find the files and folder that contains symbol '#'.

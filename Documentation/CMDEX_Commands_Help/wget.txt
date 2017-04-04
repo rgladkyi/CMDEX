@@ -1,0 +1,7 @@
+wget [params] <URL> - Download web page located by <URL>.
+	Reference: http://gnuwin32.sourceforge.net/
+	For example:
+		> wget www.google.com
+		> wget --user-agent="Chrome" --no-check-certificate  "https://www.google.com.ua/search?q=weather london"  -O Weather_London.html
+		Note: On HTTPS connections is need to use '--user-agent="Chrome" --no-check-certificate' to establish the connection.
+			Regarding to encoding: Wget uses ASCII, and there will be problem with the Unicode in example above.

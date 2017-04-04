@@ -1,0 +1,1 @@
+desktop - Open Desktop directory in Windows explorer.

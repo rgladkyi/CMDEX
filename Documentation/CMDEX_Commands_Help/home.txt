@@ -1,0 +1,1 @@
+home - Change current directory to user home direcory (For example, "C:\Users\<UserName>\")

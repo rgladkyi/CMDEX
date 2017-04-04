@@ -1,0 +1,6 @@
+helpx [command] - Show all commands description of execute '--help' or '/?' for specific command.
+	Note: Prints some reduntand information, but basically could be used.
+	For example:
+		> helpx<Enter><Space>
+		> helpx wget
+		> helpx grep

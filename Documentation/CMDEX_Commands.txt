@@ -1,0 +1,264 @@
+
+alias <alias_name> <command [parameter 1] [parameter 2] ...> - Add alias <alias_name> for <command>.
+	For example: 
+		> alias copy_txt_files copy *.txt TextFiles\
+	Current Limits: only 9 input parameters supported.
+altdrag - Enable Alt+mouse_click_move to move the windows on the screen. Very comfortable.
+	Reference: https://stefansundin.github.io/altdrag/
+cat <file_name> - Print the text file. Alias to 'type' in windows cmd.
+cp <file_to_copy> <where_to_copy> - Copy the file. Alias to 'copy' in wondows cmd. 
+dbg - Go to directory with commands.
+deldir <directory_name> - Delete directory. Alias to 'rmdir /s' in windows cmd.
+desktop - Open Desktop directory in Windows explorer.
+diff <file_1> <file_2> - Show differences between <file_1> and <file_2> in text represantation. 
+ 
+drives - Show information aboud drives: Shows dist partition and removable devices.
+end - Exit the console, and save commands history into 'History' folder.
+execute_pause <command [parameter 1] [parameter 2] ...> - Execute entered command and then wait for pressing any key.
+g <file|parameters> - Shortcut to open GVIM editor.	Can be use to open existing or create new file.
+	Reference: http://www.vim.org
+grep <params> - Search text in file/files. Alias to the Linux 'grep' command (Taken from GnuWin32 project).
+	Reference: http://gnuwin32.sourceforge.net/
+gvim <file|params> - GVIM editor for Windows. Open GVIM, and, after closing GVIM, execute 'gvim_remove_backups' (clear all gvim temp files). 
+	Reference: http://www.vim.org
+gvim_remove_backups - Clear all files that contains symbol '~' in the end of name. ;
+
+history - Print history of executed commands. The same list can be viewed by pressing 'F7' button in Windows CMD.
+
+home - Change current directory to user home direcory (For example, "C:\Users\<UserName>\")
+downloads - Change current directory into user 'Downloads' directory.
+
+i - Change current directory to folder with scripts.
+indexate - Print list of full paths, all files, in all sub-directories.
+	For example, save all indexes in indexes.txt:
+		cd C:\CMDEX
+		indexate > indexes.txt
+	The indexes.txt should contain something like this:
+		...
+		C:\CMDEX\Readme.txt
+		C:\CMDEX\Interfaces\diff.bat
+		C:\CMDEX\Interfaces\downloads.bat
+		...
+
+la - Print current or specific directory content. Sorted by name.
+ls - Print current or specific directory content. Sorted by size.
+ld - Print current or specific directory content. Sorted by date.
+ll - Print current or specific directory content as list (without additional informations). Sorted by name.
+lr - Print current or specific directory content and all subdirectories, as list of paths
+	(without additional informations). Sorted by path name.
+
+make - MinGW GCC make.
+	Reference: www.mingw.org
+	For example:
+		> cd My_C_Projects\
+		> echo make: > Makefile
+		> echo <TAB> gcc main.c -o main.exe > Makefile
+		> make
+		... To make 'main.c' source code.
+		> main.exe
+		... Rund builded programm.
+
+gcc <file|parameters> - Shortcut to MinGW GCC compiler.
+	Reference: http://www.mingw.org
+	For example, to compile main.c:
+		> gcc main.c -o main.exe
+		
+mirror - Change current direcory into 'C:\CMDEX\Mirror'. In this directory should be a list of void files - commands to execute.
+	This file named the same as in commands, but without '.bat'
+	Used as interface to find a command by pressing <Tab>.
+	For example:
+		> mirror
+		... Directoy was changed to "C:\CMDEX\Mirror"
+		> get<Tab>
+		> get_os_architecture<Tab>
+		> getdisks<Tab>
+		...
+
+mv <path_to_rename> <new_path_name> - Move/rename file. Alias to move.
+
+n - Open 'notepad' (embeded inti windows). Alias to 'notepad'.
+np - Open 'Notepad++' editor.
+	Referemce: https://notepad-plus-plus.org
+	Note: in first time usage it's will be installed to "C:\CMDEX\Tools" directory.
+
+opengoogle - Open Google search in default web browser.
+
+paint - Open MS Paint (embeded into windows).
+
+pf - Change directory to "Program Files".
+pf86 - Change directory to "Program Files (x86)"
+
+pin <name> - Pin some folder path to the 'C:\CMDEX\Wall' folder.
+	For example:
+		> cd "C:\my_photoshop_projects"
+		> pin my_photoshop_projects
+		... then execute 'wall' with this name:
+		> wall my_photoshop_projects
+		... Directory will be chaged to "C:\my_photoshop_projects"
+
+unpin <name> - Remove <name>.bat from 'Wall'.
+	For example:
+		> unpin my_photoshop_projects
+
+wall [name_of_attachment] - Open specific attachment, or open 'C:\CMDEX\Wall' folder.
+	For example:
+		...
+		> wall my_photoshop_projects
+		... Directory will be chaged to "C:\my_photoshop_projects"
+	Or:
+		> wall
+		my_photoshop_projects
+		... Directory will be chaged to "C:\my_photoshop_projects"
+
+play <mp3_file> - Play the mp3 media files from comand line.
+	Note: The file name should be without spaces.
+		To stop playing press Ctrl+C, and 'Y'
+	For example:
+	> play Queen-Flash_(Lyrics).mp3
+
+pwd - Print current directory. Alias to 'echo %cd%' or 'cd'.
+
+e - Alias to 'cd ..' - go directory up.
+
+findx <string_1> [string_2] ... - Find strings (regex) <string_1> or <string_2> or <string_n> of all files in all sub-directories under <path_to_find>
+	Regex is enabled. To find without regex, use standart 'findstr' (usage can be taken from 'findx.bat')
+	Note: This is alias to 'findin' with specified <path_to_find> parameter as '*' all files.
+	For example:
+		> findex findfile
+		...
+		Documentation\CMDEX_comands.txt:findfile <filename> - Find files names that conatains <filename> in all sub-directories. Can be part of filename.
+		Interfaces\test.txt:findfile.bat
+		Tools\MinGW\include\shlwapi.h:WINSHLWAPI LPSTR WINAPI PathFindFileNameA(LPCSTR);
+		Tools\MinGW\include\shlwapi.h:WINSHLWAPI LPWSTR WINAPI PathFindFileNameW(LPCWSTR);
+		Tools\MinGW\include\shlwapi.h:#define PathFindFileName PathFindFileNameW
+		...
+	Or:
+		> findx dir drivepath
+		...
+		add.bat:10:dir %drivePath%
+		add.bat:12:if errorlevel neq 0 mkdir %drivePath%
+		create_unique_file.bat:9:dir %name%
+		deldir.bat:15:call rmdir /s %*
+		EndUserStart.bat:2:rem set currentDirectory=%cd%
+		
+f <string_1> [string_2] ... - Alias to 'findx' command.
+
+findfile <filename> - Find files names that conatains <filename> in all sub-directories. Can be part of filename.
+	For example:
+		C:\CMDEX\Interfaces>findfile get
+		...
+		C:\CMDEX\Interfaces\getdisks.bat
+		C:\CMDEX\Interfaces\get_os_architecture.bat
+		C:\CMDEX\Interfaces\wget.bat
+		...
+ff <filename> - Alias to 'findfile' command.
+
+findin <string_1> [string_2] ... <path_to_find> - Find <string_1> or [string_2] or ... [string_n] in specific file <path_to_find>
+	or folders under <path_to_find>.
+	For example:
+		> findex something1 something2 MyFile.txt
+		... Find 'something1' or 'something2' in 'MyFile.txt'
+		> findex something1 something2 'C:\CMDEX\'
+		... Find 'something1' or 'something2' in 'C:\CMDEX\' and all sub-directories.
+
+fi <string_1> [string_2] ... <filename> - Alias to 'findin' command.
+
+sudo <command> [param_1] ... [param_7] - Execute command as Administrator.
+	Note: Currently there is limit of 7 input parameters.
+	
+rt <command> [param_1] ... [param_7] - Alias to 'sudo' command.
+su <command> [param_1] ... [param_7] - Alias to 'sudo' command.
+
+run_externally <directory_where_run> <command> [param_1] ... [param_7] -  Execute <command> with parameters [param_1] .. [param_7] (optional)
+	in <directory_where_run>
+	Note: Currently there is limit of 7 input parameters.
+	For example, to create directory as admininistrator (that is as 'sudo.bat' works)
+		sudo.lnk /c run_externally "%cd%" mkdir "C:\My_Project"
+
+save_history - Save all executed commands in "C:\CMDEX\History" folder in file, named '<date> <time>.log'.
+	Executed in 'end' command.
+sed <options> <input_file> ... - File Stream Editor, as in Linux cmd. Used for search/replace text in files.
+	Reference: http://gnuwin32.sourceforge.net/
+see_command <"command [param_1] .. [param_3]"> <execute_command>  - Execute "command [param_1] .. [param_3]" and put the 
+	console output of that into <execute_command>.
+	For example:
+		see_command "dir /s /b" echo
+		C:\CMDEX\Interfaces\7zip.bat
+		C:\CMDEX\Interfaces\admin.bat
+		C:\CMDEX\Interfaces\ADMIN.lnk
+		...
+	Or:
+		see_command "dir /s /b" "dir /n"
+		...
+		02/07/2017  03:39 PM                80 7zip.bat
+		1 File(s)             80 bytes
+		0 Dir(s)   1,420,324,864 bytes free
+
+		02/07/2017  03:39 PM                80 admin.bat
+		1 File(s)             80 bytes
+		0 Dir(s)   1,420,324,864 bytes free
+	    ...
+		
+process <"command [param_1] .. [param_3]"> <execute_command> - Alias to 'see_command'.
+		
+execute_string <"<command> [param_1] ... [param_n]"> - Execute <command> with <parameters> inside "".
+	Can be used as way to execute command as parameter inside other command.
+	For example:
+		execute_string "dir /s /b"
+		...
+		C:\CMDEX\Interfaces\7zip.bat
+		C:\CMDEX\Interfaces\admin.bat
+		C:\CMDEX\Interfaces\ADMIN.lnk
+		...
+
+getweb <URL> [params] - Get Web resource using 'wget'. Paramere '-O <file_name>' used to save resource to specific file <file_name>.
+	For example:
+		> getweb "https://www.google.com.ua/search?q=weather london"
+		... saved as "search@q=weather london"
+		> cat "search@q=weather london"
+	Or:
+		> getweb "https://www.google.com.ua/search?q=weather london" -O "weather.html"
+		> cat "weather.html"
+	Or:
+		> getweb "https://www.somesiteurl.com/FILE_TO_DOWNLOAD.zip"
+		> 7zip x FILE_TO_DOWNLOAD.zip
+	Note:
+		Currenty, there is problems with Unicode web page encoding.
+
+tag [token] - Recursively find the files and folder that contains symbol '#'.
+
+here - Open current CMD path in Windows Explorer.
+trash - Open 'Trash Bin' folder in Windows Explorer.
+
+vim - Open VI editor (console mode).
+
+wget [params] <URL> - Download web page located by <URL>.
+	Reference: http://gnuwin32.sourceforge.net/
+	For example:
+		> wget www.google.com
+		> wget --user-agent="Chrome" --no-check-certificate  "https://www.google.com.ua/search?q=weather london"  -O Weather_London.html
+		Note: On HTTPS connections is need to use '--user-agent="Chrome" --no-check-certificate' to establish the connection.
+			Regarding to encoding: Wget uses ASCII, and there will be problem with the Unicode in example above.
+			
+windirstat [path] - Execute WinDirStat. Can be used to find which folder or file is taken a lot of disk memory. (Windows Memory Statistic)
+	Reference: https://windirstat.net/
+	Good when no space left on HDD.
+	For example:
+		> windirstat C:\
+			Analyze disk C:
+		> windirstat
+			Analyze current directory.
+winmerge <path_1> <path_2> - Execute WinMerge. Can be used show differences between two files <path_1>, <path_2> of two directories <path_1>, <path_2>.
+	Reference: http://winmerge.org
+	For example:
+		winmerge file_1.txt file_2.txt
+		winmerge Logs\Folder_1\ Logs\Folder_2
+
+helpx [command] - Show all commands description of execute '--help' or '/?' for specific command.
+	Note: Prints some reduntand information, but basically could be used.
+	For example:
+		> helpx<Enter><Space>
+		> helpx wget
+		> helpx grep
+
+q Alias to 'e' means alias to 'cd 

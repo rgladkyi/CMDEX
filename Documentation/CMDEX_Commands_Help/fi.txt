@@ -1,0 +1,9 @@
+fi <string_1> [string_2] ... <filename> - Alias to 'findin' command.
+
+findin <string_1> [string_2] ... <path_to_find> - Find <string_1> or [string_2] or ... [string_n] in specific file <path_to_find>
+	or folders under <path_to_find>.
+	For example:
+		> findex something1 something2 MyFile.txt
+		... Find 'something1' or 'something2' in 'MyFile.txt'
+		> findex something1 something2 'C:\CMDEX\'
+		... Find 'something1' or 'something2' in 'C:\CMDEX\' and all sub-directories.

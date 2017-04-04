@@ -1,0 +1,3 @@
+np - Open 'Notepad++' editor.
+	Referemce: https://notepad-plus-plus.org
+	Note: in first time usage it's will be installed to "C:\CMDEX\Tools" directory.

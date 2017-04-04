@@ -1,0 +1,8 @@
+windirstat [path] - Execute WinDirStat. Can be used to find which folder or file is taken a lot of disk memory. (Windows Memory Statistic)
+	Reference: https://windirstat.net/
+	Good when no space left on HDD.
+	For example:
+		> windirstat C:\
+			Analyze disk C:
+		> windirstat
+			Analyze current directory.

@@ -1,0 +1,2 @@
+save_history - Save all executed commands in "C:\CMDEX\History" folder in file, named '<date> <time>.log'.
+	Executed in 'end' command.

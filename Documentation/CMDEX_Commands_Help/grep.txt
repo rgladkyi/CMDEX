@@ -1,0 +1,2 @@
+grep <params> - Search text in file/files. Alias to the Linux 'grep' command (Taken from GnuWin32 project).
+	Reference: http://gnuwin32.sourceforge.net/

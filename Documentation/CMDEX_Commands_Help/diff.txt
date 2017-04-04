@@ -1,0 +1,1 @@
+diff <file_1> <file_2> - Show differences between <file_1> and <file_2> in text represantation. 

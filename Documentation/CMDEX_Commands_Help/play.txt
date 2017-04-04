@@ -1,0 +1,5 @@
+play <mp3_file> - Play the mp3 media files from comand line.
+	Note: The file name should be without spaces.
+		To stop playing press Ctrl+C, and 'Y'
+	For example:
+	> play Queen-Flash_(Lyrics).mp3

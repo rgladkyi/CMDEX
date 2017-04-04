@@ -1,0 +1,13 @@
+
+set CURRENT_DIRECTORY_TO_COME_BACK=%cd%
+
+call wget --user-agent="Chrome" --no-check-certificate "https://rgladkyi.github.io/CMDEX/Tools/PortableGit.zip" -O "C:\CMDEX\Tools\PortableGit.zip"
+
+cd "C:\CMDEX\Tools\"
+call 7zip x "C:\CMDEX\Tools\PortableGit.zip"
+
+echo Check whether installation is OK..
+
+cd %CURRENT_DIRECTORY_TO_COME_BACK%
+
+

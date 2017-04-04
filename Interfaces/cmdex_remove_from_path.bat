@@ -1,0 +1,13 @@
+@echo off
+
+set LOCAL_PATH=%PATH%
+echo %LOCAL_PATH%
+
+set UPDATED_LOC_PATH=%LOCAL_PATH:;C:\CMDEX\Interfaces;=%
+set UPDATED_LOC_PATH_1=%UPDATED_LOC_PATH:;C:\CMDEX\Interfaces=%
+echo %UPDATED_LOC_PATH_1%
+
+set PATH=%UPDATED_LOC_PATH%
+setx /m PATH %UPDATED_LOC_PATH%
+
+

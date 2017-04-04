@@ -1,0 +1,1 @@
+opengoogle - Open Google search in default web browser.

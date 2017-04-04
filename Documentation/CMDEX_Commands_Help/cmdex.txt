@@ -1,0 +1,3 @@
+cmdex - Open new 'cmd' instance.
+	For example:
+		start cmdex

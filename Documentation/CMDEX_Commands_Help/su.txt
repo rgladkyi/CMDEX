@@ -1,0 +1,6 @@
+su <command> [param_1] ... [param_7] - Alias to 'sudo' command.
+
+sudo <command> [param_1] ... [param_7] - Execute command as Administrator.
+	Note: Currently there is limit of 7 input parameters.
+	
+rt <command> [param_1] ... [param_7] - Alias to 'sudo' command.

@@ -1,0 +1,1 @@
+end - Exit the console, and save commands history into 'History' folder.

@@ -1,0 +1,1 @@
+dbg - Go to directory with commands.

@@ -1,0 +1,6 @@
+e - Alias to 'cd ..' - go directory up.
+q - Alias to 'e', means alias to 'cd ..' - go directory up.
+ee - Alias to 'cd ..\..' - go 2 directory up.
+eee - Alias to 'cd ..\..\..' - go 3 directory up.
+eeee - Alias to 'cd ..\..\..\..\' - gou 4 directory up.
+eeeee - Alias to 'cd ..\..\..\..\..' - gou 5 directory up.

@@ -1,0 +1,3 @@
+unpin <name> - Remove <name>.bat from 'Wall'.
+	For example:
+		> unpin my_photoshop_projects

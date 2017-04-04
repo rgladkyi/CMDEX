@@ -1,0 +1,5 @@
+winmerge <path_1> <path_2> - Execute WinMerge. Can be used show differences between two files <path_1>, <path_2> of two directories <path_1>, <path_2>.
+	Reference: http://winmerge.org
+	For example:
+		winmerge file_1.txt file_2.txt
+		winmerge Logs\Folder_1\ Logs\Folder_2

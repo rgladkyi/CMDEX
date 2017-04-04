@@ -1,0 +1,9 @@
+wall [name_of_attachment] - Open specific attachment, or open 'C:\CMDEX\Wall' folder.
+	For example:
+		...
+		> wall my_photoshop_projects
+		... Directory will be chaged to "C:\my_photoshop_projects"
+	Or:
+		> wall
+		my_photoshop_projects
+		... Directory will be chaged to "C:\my_photoshop_projects"

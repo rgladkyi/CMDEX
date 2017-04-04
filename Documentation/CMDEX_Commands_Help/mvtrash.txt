@@ -1,0 +1,4 @@
+
+
+mv %* "C:\CMDEX\Trash\"
+

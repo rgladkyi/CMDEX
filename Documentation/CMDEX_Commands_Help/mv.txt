@@ -1,0 +1,1 @@
+mv <path_to_rename> <new_path_name> - Move/rename file. Alias to move.

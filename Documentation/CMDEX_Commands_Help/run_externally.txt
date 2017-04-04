@@ -1,0 +1,5 @@
+run_externally <directory_where_run> <command> [param_1] ... [param_7] -  Execute <command> with parameters [param_1] .. [param_7] (optional)
+	in <directory_where_run>
+	Note: Currently there is limit of 7 input parameters.
+	For example, to create directory as admininistrator (that is as 'sudo.bat' works)
+		sudo.lnk /c run_externally "%cd%" mkdir "C:\My_Project"

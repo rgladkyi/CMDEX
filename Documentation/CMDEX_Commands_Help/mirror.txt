@@ -1,0 +1,10 @@
+mirror - Change current direcory into 'C:\CMDEX\Mirror'. In this directory should be a list of void files - commands to execute.
+	This file named the same as in commands, but without '.bat'
+	Used as interface to find a command by pressing <Tab>.
+	For example:
+		> mirror
+		... Directoy was changed to "C:\CMDEX\Mirror"
+		> get<Tab>
+		> get_os_architecture<Tab>
+		> getdisks<Tab>
+		...

@@ -1,0 +1,7 @@
+pin <name> - Pin some folder path to the 'C:\CMDEX\Wall' folder.
+	For example:
+		> cd "C:\my_photoshop_projects"
+		> pin my_photoshop_projects
+		... then execute 'wall' with this name:
+		> wall my_photoshop_projects
+		... Directory will be chaged to "C:\my_photoshop_projects"

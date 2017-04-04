@@ -1,0 +1,6 @@
+Usage: <folder> <action_to_do>
+Example: call for_files_do C:\CMDEX\Interfaces\ echo
+	 call for_files_do * echo
+
+
+

@@ -1,0 +1,7 @@
+ld - Print current or specific directory content. Sorted by date.
+
+la - Print current or specific directory content. Sorted by name.
+ls - Print current or specific directory content. Sorted by size.
+ll - Print current or specific directory content as list (without additional informations). Sorted by name.
+lr - Print current or specific directory content and all subdirectories, as list of paths
+	(without additional informations). Sorted by path name.
