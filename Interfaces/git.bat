@@ -1,10 +1,6 @@
 @echo off
 
-rem call git %*
-rem if %ERRORLEVEL%==9009 (start "" "https://git-scm.com/download/win")
-rem if exist "C:\CMDEX\Tools\PortableGit\cmd\git.exe" (call "C:\CMDEX\Tools\PortableGit\cmd\git.exe" %*) else (start "" "https://git-scm.com/download/win")
-
-if not exist "C:\CMDEX\Tools\PortableGit\cmd\git.exe" (call git_install.bat)
+if not exist "C:\CMDEX\Tools\PortableGit\cmd\git.exe" (call C:\CMDEX\WinOpenInstaller\InstallScripts\git_install.bat "C:\CMDEX\Tools\")
 if exist "C:\CMDEX\Tools\PortableGit\cmd\git.exe" (call "C:\CMDEX\Tools\PortableGit\cmd\git.exe" %*) else (echo Installation failed.. Check itself.)
 
 

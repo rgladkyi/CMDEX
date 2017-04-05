@@ -1,7 +1,7 @@
 @echo off
 
 :CheckMinGw
-call check_tool "C:\CMDEX\Tools\MinGW\bin\mingw32-make.exe" mingw_install.bat
+call check_tool "C:\CMDEX\Tools\MinGW\bin\mingw32-make.exe" C:\CMDEX\WinOpenInstaller\InstallScripts\mingw_install.bat "C:\CMDEX\Tools\"
 if %errorlevel% equ 0 (goto ExecuteMinGW) else (echo. && echo Throwed error code: %errorlevel% && echo.)
 goto End
 

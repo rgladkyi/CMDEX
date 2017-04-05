@@ -5,7 +5,7 @@ if not exist %1 (goto InstallTool) else (call throw_reset)
 goto End
 
 :InstallTool
-call %2
+call %2 %3 %4 %5 %6 %7 %8 %9
 if exist %1 (goto PostInstallTool) else (goto InstallationFailed)
 goto End
 

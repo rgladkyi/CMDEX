@@ -1,6 +1,5 @@
 Copyright (C) 2017, Roman Gladkyi
-
-Followed by GNU GPL version 2.
+CMDEX is under GNU GPL version 2.
 
 GNU GENERAL PUBLIC LICENSE
 

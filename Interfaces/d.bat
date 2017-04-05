@@ -1,5 +1,5 @@
 @echo off
 
-call draft %*
+call note %*
 
 
