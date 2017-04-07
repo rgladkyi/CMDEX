@@ -1,0 +1,21 @@
+ Volume in drive C is Acer
+ Volume Serial Number is 8810-32A0
+
+ Directory of C:\Program Files (x86)\GnuWin32\bin
+
+12/23/2016  12:58 PM    <DIR>          .
+12/23/2016  12:58 PM    <DIR>          ..
+02/13/2009  10:19 AM            92,160 egrep.exe
+02/13/2009  10:19 AM            54,784 fgrep.exe
+02/13/2009  10:19 AM            96,256 grep.exe
+09/03/2008  10:49 PM         1,177,600 libeay32.dll
+03/15/2008  12:21 AM         1,008,128 libiconv2.dll
+05/06/2005  09:52 PM           103,424 libintl3.dll
+09/03/2008  10:49 PM           232,960 libssl32.dll
+03/17/2007  11:56 AM           140,288 pcre3.dll
+10/24/2007  12:10 PM            79,360 regex2.dll
+12/27/2010  07:10 PM            77,824 sed.exe
+12/23/2016  12:58 PM                 0 t
+12/31/2008  04:03 PM           449,024 wget.exe
+              12 File(s)      3,511,808 bytes
+               2 Dir(s)   3,347,206,144 bytes free
