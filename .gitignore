@@ -14,6 +14,10 @@ Tools/MinGW.hidden_2/
 Tools/MinGW_hedde-n_orign/
 Tools/GnuWin32.zip
 
+
+        Data/Date_last_opened.txt
+        Data/Date_last_opened_admin.txt
+
 Release/CMDEXsetup_prev.exe
 Release/CMDEXfolder_prev.zip
 Release/VersionIdUpdated.txt
