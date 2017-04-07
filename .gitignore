@@ -1,4 +1,5 @@
 WinOpenInstaller/Software
+Tools/
 
 Trash/
 History/
@@ -15,8 +16,8 @@ Tools/MinGW_hedde-n_orign/
 Tools/GnuWin32.zip
 
 
-        Data/Date_last_opened.txt
-        Data/Date_last_opened_admin.txt
+Data/Date_last_opened.txt
+Data/Date_last_opened_admin.txt
 
 Release/CMDEXsetup_prev.exe
 Release/CMDEXfolder_prev.zip
