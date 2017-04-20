@@ -1,0 +1,3 @@
+[submodule "WinOpenInstaller"]
+	path = WinOpenInstaller
+	url = https://github.com/rgladkyi/WinOpenInstaller.git
