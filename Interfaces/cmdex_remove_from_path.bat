@@ -13,6 +13,10 @@ rem setx /m PATH %UPDATED_LOC_PATH%
 rem REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v Path /f /t REG_SZ /d %UPDATED_LOC_PATH_1%
 
 
+
+
+
+
 set UPDATED_PATH="%PATH:;C:\CMDEX\Interfaces=%"
 
 REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v Path /f /t REG_SZ /d %UPDATED_PATH%

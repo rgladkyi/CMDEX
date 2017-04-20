@@ -1,6 +1,6 @@
 @echo off
 
-call cmdex_remove_from_path
+rem call cmdex_remove_from_path
 
 rem setx /m PATH "%PATH%;C:\CMDEX\Interfaces" 
 
@@ -10,8 +10,8 @@ rem REG QUERY HKCU\SOFTWARE\Ditto /v DittoHotKey
 rem reg add ... HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Environment\Path
 
 
-
-set UPDATED_PATH="%PATH%;C:\CMDEX\Interfaces"
+set REVERTED_PATH=%PATH:;C:\CMDEX\Interfaces=%
+set UPDATED_PATH="%REVERTED_PATH%;C:\CMDEX\Interfaces"
 
 REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v Path /f /t REG_SZ /d %UPDATED_PATH%
 
