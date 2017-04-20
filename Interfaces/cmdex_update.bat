@@ -60,7 +60,7 @@ cd /d C:\
 echo Updating...
 md "%TEMP%\7z"
 
-call cpd /y /q "C:\CMDEX\Tools\7z" "%TEMP%\7z"
+call xcopy /e /y /q "C:\CMDEX\Tools\7z" "%TEMP%\7z"
 call "%TEMP%\7z\7za.exe" x -aoa "C:\CMDEX\Release\CMDEXfolder.zip"
 
 call rmdir /s /q "%TEMP%\7z" 
