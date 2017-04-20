@@ -2,7 +2,7 @@
 
 call cmdex_remove_from_path
 
-rem setx PATH "%PATH%;C:\CMDEX\Interfaces" /m 
+rem setx /m PATH "%PATH%;C:\CMDEX\Interfaces" 
 
 rem REG ADD HKCU\SOFTWARE\Ditto /v DittoHotKey /f /t REG_DWORD /d 704
 rem REG QUERY HKCU\SOFTWARE\Ditto /v DittoHotKey 
