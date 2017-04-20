@@ -1,3 +1,4 @@
-[submodule "WinOpenInstaller"]
-	path = WinOpenInstaller
-	url = https://github.com/rgladkyi/WinOpenInstaller.git
+[submodule "WinOpenInstaller"]	path = WinOpenInstaller	url = https://github.com/rgladkyi/WinOpenInstaller.git
+[submodule "Autogenerate"]
+	path = Autogenerate
+	url = https://github.com/rgladkyi/Autogenerate.git
