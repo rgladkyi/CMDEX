@@ -2,10 +2,10 @@
 
 set CURRENT_DIRECTORY_TO_COME_BACK=%cd%
 
-call wget --user-agent="Chrome" --no-check-certificate "https://rgladkyi.github.io/CMDEX/Tools/MinGW.zip" -O "C:\CMDEX\Tools\MinGW.zip"
+call wget --user-agent="Chrome" --no-check-certificate "https://rgladkyi.github.io/CMDEX/Tools/MinGW.zip" -O "%CMDEX_ROOT_DIR%\Tools\MinGW.zip"
 
-call cd /d "C:\CMDEX\Tools\"
-call 7zip x -aoa "C:\CMDEX\Tools\MinGW.zip"
+call cd /d "%CMDEX_ROOT_DIR%\Tools\"
+call 7zip x -aoa "%CMDEX_ROOT_DIR%\Tools\MinGW.zip"
 
 echo Check whether installation is OK..
 

@@ -1,5 +1,5 @@
 @echo off
 
-call mv %* "C:\CMDEX\Trash\"
+call mv %* "%CMDEX_ROOT_DIR%\Trash\"
 
 

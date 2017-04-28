@@ -1,5 +1,5 @@
 @echo off
 
-call "C:\CMDEX\Tools\7z\7za.exe" %*
+call "%CMDEX_ROOT_DIR%\Tools\7z\7za.exe" %*
 
 

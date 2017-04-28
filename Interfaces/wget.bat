@@ -1,6 +1,6 @@
 @echo off
 
 call throw_reset
-call "C:\CMDEX\Tools\GnuWin32\bin\wget" %*
+call "%CMDEX_ROOT_DIR%\Tools\GnuWin32\bin\wget" %*
 
 

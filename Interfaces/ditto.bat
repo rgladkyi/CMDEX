@@ -1,8 +1,8 @@
 @echo off
 
-if not exist "C:\CMDEX\Tools\Ditto\Ditto.exe" (call C:\CMDEX\WinOpenInstaller\InstallScripts\ditto_install.bat "C:\CMDEX\Tools")
+if not exist "%CMDEX_ROOT_DIR%\Tools\Ditto\Ditto.exe" (call %CMDEX_ROOT_DIR%\WinOpenInstaller\InstallScripts\ditto_install.bat "%CMDEX_ROOT_DIR%\Tools")
 
-if exist "C:\CMDEX\Tools\Ditto\Ditto.exe" (start "" "C:\CMDEX\Tools\Ditto\Ditto.exe" %*) else (echo Installation failed.. Check itself. && goto Exit)
+if exist "%CMDEX_ROOT_DIR%\Tools\Ditto\Ditto.exe" (start "" "%CMDEX_ROOT_DIR%\Tools\Ditto\Ditto.exe" %*) else (echo Installation failed.. Check itself. && goto Exit)
 goto Instructions
 
 :Instructions

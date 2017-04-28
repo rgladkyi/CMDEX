@@ -1,7 +1,7 @@
 @echo off
 
 :Start
-if "%1"==clear (echo. >> "C:\CMDEX\Data\Drafts.txt") else (cmd /c notepad "C:\CMDEX\Data\Drafts.txt")
+if "%1"==clear (echo. >> "%CMDEX_ROOT_DIR%\Data\Drafts.txt") else (cmd /c notepad "%CMDEX_ROOT_DIR%\Data\Drafts.txt")
 goto End
 
 :End

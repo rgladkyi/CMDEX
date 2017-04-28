@@ -5,11 +5,11 @@ set CURRENT_DIRECTORY_TO_COME_BACK=%cd%
 goto CheckForUpdate
 
 :CheckForUpdate
-call wget -q --user-agent="Chrome" --no-check-certificate "https://rgladkyi.github.io/CMDEX/Release/VersionId.txt" -O "C:\CMDEX\Release\VersionIdUpdated.txt" 1> NUL 2> NUL
+call wget -q --user-agent="Chrome" --no-check-certificate "https://rgladkyi.github.io/CMDEX/Release/VersionId.txt" -O "%CMDEX_ROOT_DIR%\Release\VersionIdUpdated.txt" 1> NUL 2> NUL
 if %errorlevel% neq 0 (echo Download fails. Check itself the 'update.bat' in 'Interfaces' folder. && goto End)
 
-set /p VersionId_txt=<"C:\CMDEX\Release\VersionId.txt"
-set /p VersionIdUpdated_txt=<"C:\CMDEX\Release\VersionIdUpdated.txt"
+set /p VersionId_txt=<"%CMDEX_ROOT_DIR%\Release\VersionId.txt"
+set /p VersionIdUpdated_txt=<"%CMDEX_ROOT_DIR%\Release\VersionIdUpdated.txt"
 
 echo.
 echo Current version: %VersionId_txt%
@@ -20,35 +20,35 @@ if %VersionIdUpdated_txt% gtr %VersionId_txt% (goto UpdateCMDEXByZip) else (echo
 goto End
 
 :UpdateCMDEXByInstaller
-call wget --user-agent="Chrome" --no-check-certificate "https://rgladkyi.github.io/CMDEX/Release/CMDEXsetup.exe" -O "C:\CMDEX\Release\CMDEXsetup_new.exe"
+call wget --user-agent="Chrome" --no-check-certificate "https://rgladkyi.github.io/CMDEX/Release/CMDEXsetup.exe" -O "%CMDEX_ROOT_DIR%\Release\CMDEXsetup_new.exe"
 if %errorlevel% neq 0 (echo Download fails. Check itself the 'update.bat' in 'Interfaces' folder. && goto End)
 
-call del "C:\CMDEX\Release\CMDEXsetup_prev.exe"
-call mv "C:\CMDEX\Release\CMDEXsetup.exe" "C:\CMDEX\Release\CMDEXsetup_prev.exe"
-call mv "C:\CMDEX\Release\CMDEXsetup_new.exe" "C:\CMDEX\Release\CMDEXsetup.exe"
+call del "%CMDEX_ROOT_DIR%\Release\CMDEXsetup_prev.exe"
+call mv "%CMDEX_ROOT_DIR%\Release\CMDEXsetup.exe" "%CMDEX_ROOT_DIR%\Release\CMDEXsetup_prev.exe"
+call mv "%CMDEX_ROOT_DIR%\Release\CMDEXsetup_new.exe" "%CMDEX_ROOT_DIR%\Release\CMDEXsetup.exe"
 
 echo.
-echo Warning: Files of "C:\CMDEX" will be overwritten.
+echo Warning: Files of "%CMDEX_ROOT_DIR%" will be overwritten.
 echo Note: In case of updating, Reboot after installation is not required and can be skipped.
 echo.
 
 call pause
 
-call "C:\CMDEX\Release\CMDEXsetup.exe"
+call "%CMDEX_ROOT_DIR%\Release\CMDEXsetup.exe"
 
 echo Check whether installation is OK..
 goto End
 
 :UpdateCMDEXByZip
-call wget --user-agent="Chrome" --no-check-certificate "https://rgladkyi.github.io/CMDEX/Release/CMDEXfolder.zip" -O "C:\CMDEX\Release\CMDEXfolder_new.zip"
+call wget --user-agent="Chrome" --no-check-certificate "https://rgladkyi.github.io/CMDEX/Release/CMDEXfolder.zip" -O "%CMDEX_ROOT_DIR%\Release\CMDEXfolder_new.zip"
 if %errorlevel% neq 0 (echo Download fails. Check itself the 'update.bat' in 'Interfaces' folder. && goto End)
 
-call del "C:\CMDEX\Release\CMDEXfolder_prev.zip"
-call mv "C:\CMDEX\Release\CMDEXfolder.zip" "C:\CMDEX\Release\CMDEXfolder_prev.zip"
-call mv "C:\CMDEX\Release\CMDEXfolder_new.zip" "C:\CMDEX\Release\CMDEXfolder.zip"
+call del "%CMDEX_ROOT_DIR%\Release\CMDEXfolder_prev.zip"
+call mv "%CMDEX_ROOT_DIR%\Release\CMDEXfolder.zip" "%CMDEX_ROOT_DIR%\Release\CMDEXfolder_prev.zip"
+call mv "%CMDEX_ROOT_DIR%\Release\CMDEXfolder_new.zip" "%CMDEX_ROOT_DIR%\Release\CMDEXfolder.zip"
 
 echo.
-echo Warning: Files of "C:\CMDEX" will be overwritten.
+echo Warning: Files of "%CMDEX_ROOT_DIR%" will be overwritten.
 echo.
 
 call pause
@@ -60,8 +60,8 @@ cd /d C:\
 echo Updating...
 md "%TEMP%\7z"
 
-call xcopy /e /y /q "C:\CMDEX\Tools\7z" "%TEMP%\7z"
-call "%TEMP%\7z\7za.exe" x -aoa "C:\CMDEX\Release\CMDEXfolder.zip"
+call xcopy /e /y /q "%CMDEX_ROOT_DIR%\Tools\7z" "%TEMP%\7z"
+call "%TEMP%\7z\7za.exe" x -aoa "%CMDEX_ROOT_DIR%\Release\CMDEXfolder.zip"
 
 call rmdir /s /q "%TEMP%\7z" 
 

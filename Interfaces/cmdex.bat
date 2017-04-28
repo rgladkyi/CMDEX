@@ -1,7 +1,7 @@
 @echo off
 
 :Start
-if "%1"=="admin" (set PATH_FILE_DATE_LAST_OPENED="C:\CMDEX\Data\Date_last_opened_admin.txt") else (set PATH_FILE_DATE_LAST_OPENED="C:\CMDEX\Data\Date_last_opened.txt")
+if "%1"=="admin" (set PATH_FILE_DATE_LAST_OPENED="%CMDEX_ROOT_DIR%\Data\Date_last_opened_admin.txt") else (set PATH_FILE_DATE_LAST_OPENED="%CMDEX_ROOT_DIR%\Data\Date_last_opened.txt")
 
 call home
 
@@ -12,9 +12,9 @@ goto StartCMD
 :CheckVersion
 
 REM echo Actions related to check for update
-set /p VersionId_txt=<"C:\CMDEX\Release\VersionId.txt"
+set /p VersionId_txt=<"%CMDEX_ROOT_DIR%\Release\VersionId.txt"
 if "%VersionId_txt%"=="" (set VersionId_txt=0)
-set /p VersionIdUpdated_txt=<"C:\CMDEX\Release\VersionIdUpdated.txt"
+set /p VersionIdUpdated_txt=<"%CMDEX_ROOT_DIR%\Release\VersionIdUpdated.txt"
 if "%VersionIdUpdated_txt%"=="" (set VersionIdUpdated_txt=0)
 
 
@@ -23,13 +23,13 @@ if %VersionIdUpdated_txt% gtr %VersionId_txt% (goto StartCMD) else (goto CheckFo
 goto End
 
 :CheckForUpdates
-call wget -q --user-agent="Chrome" --no-check-certificate "https://rgladkyi.github.io/CMDEX/Release/VersionId.txt" -O "C:\CMDEX\Release\VersionIdUpdated.txt" 1> NUL 2> NUL
+call wget -q --user-agent="Chrome" --no-check-certificate "https://rgladkyi.github.io/CMDEX/Release/VersionId.txt" -O "%CMDEX_ROOT_DIR%\Release\VersionIdUpdated.txt" 1> NUL 2> NUL
 if %errorlevel% neq 0 (echo Download fails. Check itself the 'updatex.bat' in 'Interfaces' folder. && goto StartCMD) 1> NUL 2> NUL
 
-set /p VersionId_txt=<"C:\CMDEX\Release\VersionId.txt"
+set /p VersionId_txt=<"%CMDEX_ROOT_DIR%\Release\VersionId.txt"
 if "%VersionId_txt%"=="" (set VersionId_txt=0)
 
-set /p VersionIdUpdated_txt=<"C:\CMDEX\Release\VersionIdUpdated.txt"
+set /p VersionIdUpdated_txt=<"%CMDEX_ROOT_DIR%\Release\VersionIdUpdated.txt"
 if "%VersionIdUpdated_txt%"=="" (set VersionIdUpdated_txt=0)
 
 

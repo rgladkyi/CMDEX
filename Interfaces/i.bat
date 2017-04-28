@@ -1,5 +1,5 @@
 @echo off
 
-call c "C:\CMDEX\Interfaces"
+call c "%CMDEX_ROOT_DIR%\Interfaces"
 
 

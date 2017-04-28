@@ -1,5 +1,5 @@
 @echo off
 
-call "C:\CMDEX\Tools\PortableGit\cmd\gitk.exe" %*
+call "%CMDEX_ROOT_DIR%\Tools\PortableGit\cmd\gitk.exe" %*
 
 

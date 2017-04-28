@@ -1,5 +1,5 @@
 @echo off
 
-if [%1]==[] (call ls "C:\CMDEX\Wall") else ("C:\CMDEX\Wall\%1")
+if [%1]==[] (call ls "%CMDEX_ROOT_DIR%\Wall") else ("%CMDEX_ROOT_DIR%\Wall\%1")
 
 

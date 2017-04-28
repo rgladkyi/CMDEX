@@ -1,7 +1,7 @@
 @echo off
 
-if not exist "C:\CMDEX\Tools\Notepad++\notepad++.exe" (call C:\CMDEX\WinOpenInstaller\InstallScripts\np_install.bat "C:\CMDEX\Tools")
+if not exist "%CMDEX_ROOT_DIR%\Tools\Notepad++\notepad++.exe" (call %CMDEX_ROOT_DIR%\WinOpenInstaller\InstallScripts\np_install.bat "%CMDEX_ROOT_DIR%\Tools")
 
-if exist "C:\CMDEX\Tools\Notepad++\notepad++.exe" (start "" "C:\CMDEX\Tools\Notepad++\notepad++.exe" %*) else (echo Installation failed.. Check itself.)
+if exist "%CMDEX_ROOT_DIR%\Tools\Notepad++\notepad++.exe" (start "" "%CMDEX_ROOT_DIR%\Tools\Notepad++\notepad++.exe" %*) else (echo Installation failed.. Check itself.)
 
 

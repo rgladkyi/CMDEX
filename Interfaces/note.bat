@@ -5,14 +5,14 @@ if [%1]==[] (goto SaveInNotepad) else (goto SaveAsCMDParams)
 goto End
 
 :SaveInNotepad
-echo. >> "C:\CMDEX\Data\CurrentDraft.txt" 
-cmd /c notepad "C:\CMDEX\Data\CurrentDraft.txt" 
-type "C:\CMDEX\Data\CurrentDraft.txt" >> "C:\CMDEX\Data\Drafts.txt" 
-del "C:\CMDEX\Data\CurrentDraft.txt"
+echo. >> "%CMDEX_ROOT_DIR%\Data\CurrentDraft.txt" 
+cmd /c notepad "%CMDEX_ROOT_DIR%\Data\CurrentDraft.txt" 
+type "%CMDEX_ROOT_DIR%\Data\CurrentDraft.txt" >> "%CMDEX_ROOT_DIR%\Data\Drafts.txt" 
+del "%CMDEX_ROOT_DIR%\Data\CurrentDraft.txt"
 goto End
 
 :SaveAsCMDParams
-echo %* >> "C:\CMDEX\Data\Drafts.txt" 
+echo %* >> "%CMDEX_ROOT_DIR%\Data\Drafts.txt" 
 goto End
 
 :End

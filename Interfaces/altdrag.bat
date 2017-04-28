@@ -1,8 +1,8 @@
 @echo off
 
-if not exist "C:\CMDEX\Tools\AltDrag\AltDrag.exe" (call C:\CMDEX\WinOpenInstaller\InstallScripts\altdrag_install.bat "C:\CMDEX\Tools")
+if not exist "%CMDEX_ROOT_DIR%\Tools\AltDrag\AltDrag.exe" (call %CMDEX_ROOT_DIR%\WinOpenInstaller\InstallScripts\altdrag_install.bat "%CMDEX_ROOT_DIR%\Tools")
 
-if exist "C:\CMDEX\Tools\AltDrag\AltDrag.exe" (start "" "C:\CMDEX\Tools\AltDrag\AltDrag.exe" %*) else (echo Installation failed.. Check itself. && goto Exit)
+if exist "%CMDEX_ROOT_DIR%\Tools\AltDrag\AltDrag.exe" (start "" "%CMDEX_ROOT_DIR%\Tools\AltDrag\AltDrag.exe" %*) else (echo Installation failed.. Check itself. && goto Exit)
 goto Instructions
 
 :Instructions

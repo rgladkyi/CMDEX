@@ -1,5 +1,5 @@
 @echo off
 
-start "" "C:\CMDEX\Tools\WinMerge\WinMergeU.exe"  %*
+start "" "%CMDEX_ROOT_DIR%\Tools\WinMerge\WinMergeU.exe"  %*
 
 

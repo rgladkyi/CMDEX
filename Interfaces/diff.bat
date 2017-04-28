@@ -1,5 +1,5 @@
 @echo off
 
-call "C:\CMDEX\Tools\Vim\vim80\diff.exe" %*
+call "%CMDEX_ROOT_DIR%\Tools\Vim\vim80\diff.exe" %*
 
 
