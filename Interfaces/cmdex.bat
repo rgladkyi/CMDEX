@@ -49,7 +49,8 @@ echo %date% > %PATH_FILE_DATE_LAST_OPENED%
 goto StartCmd
 
 :StartCmd
-cmd %2 %3 %4 %5 %6 %7 %8 %9
+cd  %2 %3 %4 %5 %6 %7 %8 %9
+cmd
 goto End
 
 :End
