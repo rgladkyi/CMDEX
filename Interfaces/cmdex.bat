@@ -1,11 +1,10 @@
-rem @echo off
+@echo off
 
 :Start
 if "%1"=="admin" (set PATH_FILE_DATE_LAST_OPENED="%CMDEX_ROOT_DIR%\Data\Date_last_opened_admin.txt") else (set PATH_FILE_DATE_LAST_OPENED="%CMDEX_ROOT_DIR%\Data\Date_last_opened.txt")
 
 call home
 call cmdex_get_set_root_dir.bat
-pause
 
 if exist %PATH_FILE_DATE_LAST_OPENED% (call find "%date%" %PATH_FILE_DATE_LAST_OPENED% > NUL) else (call throw_error)
 if %errorlevel%==1 (goto CheckVersion)

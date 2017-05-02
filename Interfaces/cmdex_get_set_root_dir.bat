@@ -1,4 +1,4 @@
-rem @echo off
+@echo off
 
 if [%CMDEX_ROOT_DIR%]==[] (goto GetCMDEXRootDir) else (goto ReturnCMDEXRootDir)
 
