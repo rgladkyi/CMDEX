@@ -1,9 +1,11 @@
-@echo off
+rem @echo off
 
 :Start
 if "%1"=="admin" (set PATH_FILE_DATE_LAST_OPENED="%CMDEX_ROOT_DIR%\Data\Date_last_opened_admin.txt") else (set PATH_FILE_DATE_LAST_OPENED="%CMDEX_ROOT_DIR%\Data\Date_last_opened.txt")
 
 call home
+call cmdex_get_set_root_dir.bat
+pause
 
 if exist %PATH_FILE_DATE_LAST_OPENED% (call find "%date%" %PATH_FILE_DATE_LAST_OPENED% > NUL) else (call throw_error)
 if %errorlevel%==1 (goto CheckVersion)
@@ -16,7 +18,6 @@ set /p VersionId_txt=<"%CMDEX_ROOT_DIR%\Release\VersionId.txt"
 if "%VersionId_txt%"=="" (set VersionId_txt=0)
 set /p VersionIdUpdated_txt=<"%CMDEX_ROOT_DIR%\Release\VersionIdUpdated.txt"
 if "%VersionIdUpdated_txt%"=="" (set VersionIdUpdated_txt=0)
-
 
 REM echo if new version is available, do not do additional checks. If curently is latest version then check for updates.
 if %VersionIdUpdated_txt% gtr %VersionId_txt% (goto StartCMD) else (goto CheckForUpdates)
@@ -50,7 +51,8 @@ goto StartCmd
 
 :StartCmd
 cd  %2 %3 %4 %5 %6 %7 %8 %9
-cmd
+rem cmd
+cmd /k cmdex_get_set_root_dir.bat
 goto End
 
 :End
