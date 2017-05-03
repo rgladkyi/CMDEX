@@ -1,6 +1,6 @@
 rem @echo off
 
-if [%CMDEX_ROOT_DIR%]==[] (goto GetCMDEXRootDir) else (goto ReturnCMDEXRootDir)
+if ["%CMDEX_ROOT_DIR%"]==[""] (goto GetCMDEXRootDir) else (goto ReturnCMDEXRootDir)
 
 :GetCMDEXRootDir
 FOR /F "usebackq tokens=2,* skip=2" %%L IN (
