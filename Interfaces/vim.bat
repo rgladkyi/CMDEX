@@ -1,7 +1,7 @@
 @echo off
 
 :Check
-call check_tool "%CMDEX_ROOT_DIR%\Tools\Vim\vim80\vim.exe" %CMDEX_ROOT_DIR%\WinOpenInstaller\InstallScripts\vim_install.bat  "%CMDEX_ROOT_DIR%\Tools"
+call check_tool "%CMDEX_ROOT_DIR%\Tools\Vim\vim80\vim.exe" "%CMDEX_ROOT_DIR%\WinOpenInstaller\InstallScripts\vim_install.bat"  "%CMDEX_ROOT_DIR%\Tools"
 if %errorlevel% equ 0 (goto Execute) else (echo. && echo Throwed error code: %errorlevel% && echo.)
 goto End
 
