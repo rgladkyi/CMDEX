@@ -49,7 +49,7 @@ echo %date% > %PATH_FILE_DATE_LAST_OPENED%
 goto StartCmd
 
 :StartCmd
-cd  %2 %3 %4 %5 %6 %7 %8 %9
+call c  %2 %3 %4 %5 %6 %7 %8 %9
 rem cmd
 cmd /k cmdex_get_set_root_dir.bat
 goto End
