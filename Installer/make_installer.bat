@@ -1,9 +1,9 @@
 @echo off
 
-call n "C:\CMDEX\Release\VersionId.txt"
+call n "%CMDEX_ROOT_DIR%\Release\VersionId.txt"
 call pause3
 
-set /p VersionId_txt=<"C:\CMDEX\Release\VersionId.txt"
+set /p VersionId_txt=<"%CMDEX_ROOT_DIR%\Release\VersionId.txt"
 echo New version is %VersionId_txt%.
 
 set DIRECTORY_PATH_TO_RETURN=%cd%
