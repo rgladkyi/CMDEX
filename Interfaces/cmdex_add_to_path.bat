@@ -9,11 +9,17 @@ rem REG QUERY HKCU\SOFTWARE\Ditto /v DittoHotKey
  
 rem reg add ... HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Environment\Path
 
-set CMDEX_ROOT_DIR=%1
+
+
+
+
+set CMDEX_ROOT_DIR_WRAPPED=%1
 echo %date% %time% >> C:\cmdex_debug.txt
 echo %1 >> C:\cmdex_debug.txt
 echo %CMDEX_ROOT_DIR% >> C:\cmdex_debug.txt
 pause
+set CMDEX_ROOT_DIR=%CMDEX_ROOT_DIR_WRAPPED:"=%
+
 
 set REVERTED_PATH=%PATH:;%CMDEX_ROOT_DIR%\Interfaces=%
 echo %REVERTED_PATH%
