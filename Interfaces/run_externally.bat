@@ -7,8 +7,8 @@ echo Script folder: "%cd%"
 echo Execute in: %DIR_TO_CHANGE%
 echo Command to execute: %CMD_TO_EXEC%
 
-call c %DIR_TO_CHANGE%
-call %CMD_TO_EXEC%
+call cd /d %DIR_TO_CHANGE%
+call "%CMDEX_ROOT_DIR%\Interfaces\%CMD_TO_EXEC%"
 
 call pause
 
