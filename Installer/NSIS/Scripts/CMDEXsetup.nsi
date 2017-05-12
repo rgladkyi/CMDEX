@@ -64,10 +64,6 @@ Section "CMDEX" SectionCMDEX
 
   SetOverwrite on
 
-  ExecWait '"$%CMDEX_ROOT_DIR%\Installer\TerminateRunningProcessesBeforeItsUpdate.bat"'
-  ExecWait '"$%CMDEX_ROOT_DIR%\Interfaces\cmdex_add_settings_to_registry.bat" "$INSTDIR"'
-  ExecWait '"$%CMDEX_ROOT_DIR%\Interfaces\cmdex_get_set_root_dir.bat"'
-  
   SetOutPath "$INSTDIR\"    
   File /r "$%CMDEX_ROOT_DIR%\install.bat"
 
@@ -92,7 +88,7 @@ Section "CMDEX" SectionCMDEX
   ;File /r "$%CMDEX_ROOT_DIR%\History\doc.txt"
 
   SetOutPath "$INSTDIR\Installer\"    
-  File /r "$%CMDEX_ROOT_DIR%\Installer\*"
+  ;File /r "$%CMDEX_ROOT_DIR%\Installer\*"
 
   SetOutPath "$INSTDIR\Interfaces\"
   File /r "$%CMDEX_ROOT_DIR%\Interfaces\*"
@@ -179,13 +175,42 @@ Section "CMDEX" SectionCMDEX
   ;test File /r "$%CMDEX_ROOT_DIR%\Interfaces\*"
 
   ;Store installation folder
-  WriteRegStr HKCU "Software\CMDEX" "" $INSTDIR
+;  WriteRegStr HKCU "Software\CMDEX" "" $INSTDIR
 
   ;Create uninstaller
   WriteUninstaller "$INSTDIR\Uninstall.exe"
 
-  ExecWait '"$%CMDEX_ROOT_DIR%\Interfaces\cmdex_add_to_path.bat" "$INSTDIR"'
-  ExecWait '"$%CMDEX_ROOT_DIR%\Interfaces\cmdex_create_shortcuts.bat"'
+  ;---------- Bat filese to execute
+        
+        SetOutPath "$INSTDIR\Installer\TerminateRunningProcessesBeforeItsUpdate.bat"
+  File /r "$%CMDEX_ROOT_DIR%\Installer\TerminateRunningProcessesBeforeItsUpdate.bat"
+
+        SetOutPath "$INSTDIR\Interfaces\cmdex_add_settings_to_registry.bat"
+  File /r "$%CMDEX_ROOT_DIR%\Interfaces\cmdex_add_settings_to_registry.bat"
+
+        SetOutPath "$INSTDIR\Interfaces\cmdex_get_set_root_dir.bat"
+  File /r "$%CMDEX_ROOT_DIR%\Interfaces\cmdex_get_set_root_dir.bat"
+
+        SetOutPath "$INSTDIR\Interfaces\cmdex_add_to_path.bat"
+  File /r "$%CMDEX_ROOT_DIR%\Interfaces\cmdex_add_to_path.bat"
+
+        SetOutPath "$INSTDIR\Interfaces\cmdex_create_shortcuts.bat"
+  File /r "$%CMDEX_ROOT_DIR%\Interfaces\cmdex_create_shortcuts.bat"
+
+  ExecWait '"$INSTDIR\Installer\TerminateRunningProcessesBeforeItsUpdate.bat"'
+  ExecWait '"$INSTDIR\Interfaces\cmdex_add_settings_to_registry.bat" "$INSTDIR"'
+  ExecWait '"$INSTDIR\Interfaces\cmdex_get_set_root_dir.bat"'
+
+  ExecWait '"$INSTDIR\Interfaces\cmdex_add_to_path.bat" "$INSTDIR"'
+  ExecWait '"$INSTDIR\Interfaces\cmdex_create_shortcuts.bat"'
+
+  ;---------------- TEST
+  ;ExecWait '"C:\CMDEX\Installer\TerminateRunningProcessesBeforeItsUpdate.bat"'
+  ;ExecWait '"C:\CMDEX\Interfaces\cmdex_add_settings_to_registry.bat" "C:\CMDEX Preset"'
+  ;ExecWait '"C:\CMDEX\Interfaces\cmdex_get_set_root_dir.bat"'
+
+  ;ExecWait '"C:\CMDEX\Interfaces\cmdex_add_to_path.bat" "C:\CMDEX Preset"'
+  ;ExecWait '"C:\CMDEX\Interfaces\cmdex_create_shortcuts.bat"'
 
 SectionEnd
 
