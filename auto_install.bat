@@ -1,0 +1,2 @@
+
+call install "%cd%"
