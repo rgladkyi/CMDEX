@@ -5,7 +5,7 @@ set CURRENT_DIRECTORY_TO_COME_BACK=%cd%
 goto CheckForUpdate
 
 :CheckForUpdate
-call wget -q --user-agent="Chrome" --no-check-certificate "https://rgladkyi.github.io/CMDEX/Release/VersionId.txt" -O "%CMDEX_ROOT_DIR%\Release\VersionIdUpdated.txt" 1> NUL 2> NUL
+call wget -q --user-agent="Chrome" --no-check-certificate "https://raw.githubusercontent.com/rgladkyi/CMDEX/master/Release/VersionId.txt" -O "%CMDEX_ROOT_DIR%\Release\VersionIdUpdated.txt" 1> NUL 2> NUL
 if %errorlevel% neq 0 (echo Download fails. Check itself the 'update.bat' in 'Interfaces' folder. && goto End)
 
 set /p VersionId_txt=<"%CMDEX_ROOT_DIR%\Release\VersionId.txt"
@@ -20,7 +20,7 @@ if %VersionIdUpdated_txt% gtr %VersionId_txt% (goto UpdateCMDEXByZip) else (echo
 goto End
 
 :UpdateCMDEXByInstaller
-call wget --user-agent="Chrome" --no-check-certificate "https://rgladkyi.github.io/CMDEX/Release/CMDEXsetup.exe" -O "%CMDEX_ROOT_DIR%\Release\CMDEXsetup_new.exe"
+call wget --user-agent="Chrome" --no-check-certificate "https://raw.githubusercontent.com/rgladkyi/CMDEX/master/Release/CMDEXsetup.exe" -O "%CMDEX_ROOT_DIR%\Release\CMDEXsetup_new.exe"
 if %errorlevel% neq 0 (echo Download fails. Check itself the 'update.bat' in 'Interfaces' folder. && goto End)
 
 call del "%CMDEX_ROOT_DIR%\Release\CMDEXsetup_prev.exe"
@@ -40,7 +40,7 @@ echo Check whether installation is OK..
 goto End
 
 :UpdateCMDEXByZip
-call wget --user-agent="Chrome" --no-check-certificate "https://rgladkyi.github.io/CMDEX/Release/CMDEXfolder.zip" -O "%CMDEX_ROOT_DIR%\Release\CMDEXfolder_new.zip"
+call wget --user-agent="Chrome" --no-check-certificate "https://raw.githubusercontent.com/rgladkyi/CMDEX/master/Release/CMDEXfolder.zip" -O "%CMDEX_ROOT_DIR%\Release\CMDEXfolder_new.zip"
 if %errorlevel% neq 0 (echo Download fails. Check itself the 'update.bat' in 'Interfaces' folder. && goto End)
 
 call del "%CMDEX_ROOT_DIR%\Release\CMDEXfolder_prev.zip"
