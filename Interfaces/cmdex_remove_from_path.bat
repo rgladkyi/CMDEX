@@ -1,4 +1,4 @@
-@echo off
+@echo off && call cmdex_pre_run.bat
 
 rem set LOCAL_PATH=%PATH%
 rem echo %LOCAL_PATH%

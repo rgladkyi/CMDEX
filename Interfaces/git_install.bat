@@ -1,4 +1,4 @@
-@echo off
+@echo off && call cmdex_pre_run.bat
 
 set CURRENT_DIRECTORY_TO_COME_BACK=%cd%
 

@@ -1,4 +1,4 @@
-rem @echo off
+rem @echo off && call cmdex_pre_run.bat
 
 if ["%CMDEX_ROOT_DIR%"]==[""] (goto GetCMDEXRootDir) else (goto ReturnCMDEXRootDir)
 

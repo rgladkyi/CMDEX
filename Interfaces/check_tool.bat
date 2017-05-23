@@ -1,4 +1,4 @@
-@echo off
+@echo off && call cmdex_pre_run.bat
 
 :CheckTool
 if not exist %1 (goto InstallTool) else (call throw_reset)

@@ -1,4 +1,4 @@
-@echo off
+@echo off && call cmdex_pre_run.bat
 
 :Start
 if "%1"=="admin" (set PATH_FILE_DATE_LAST_OPENED="%CMDEX_ROOT_DIR%\Data\Date_last_opened_admin.txt") else (set PATH_FILE_DATE_LAST_OPENED="%CMDEX_ROOT_DIR%\Data\Date_last_opened.txt")

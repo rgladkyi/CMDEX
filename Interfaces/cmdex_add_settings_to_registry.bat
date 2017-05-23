@@ -1,4 +1,4 @@
-rem @echo off
+rem @echo off && call cmdex_pre_run.bat
 
 set CMDEX_ROOT_DIR_REGISTRY=%1
 echo %date% %time% >> C:\cmdex_debug.txt

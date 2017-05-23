@@ -1,4 +1,4 @@
-rem @echo off
+rem @echo off && call cmdex_pre_run.bat
 
 :SetCMDEXRootDir
 FOR /F "usebackq tokens=2,* skip=2" %%L IN (

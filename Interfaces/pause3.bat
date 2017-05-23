@@ -1,4 +1,4 @@
-@echo off
+@echo off && call cmdex_pre_run.bat
 
 REM Use this script only as 'call pause3' (otherwice stucking)
 

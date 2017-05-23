@@ -1,4 +1,4 @@
-@echo off
+@echo off && call cmdex_pre_run.bat
 
 del "%USERPROFILE%\Desktop\ADMIN.lnk" 
 del "%USERPROFILE%\Desktop\CMDEX.lnk"

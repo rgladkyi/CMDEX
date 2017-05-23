@@ -1,7 +1,8 @@
-@echo off
+@echo off && call cmdex_pre_run.bat
 
-if ["%CMDEX_ROOT_DIR%"]==[] (call cmdex_get_set_root_dir.bat)
-
+:Action
 call c "%CMDEX_ROOT_DIR%\Interfaces"
+goto End
 
+:End
 

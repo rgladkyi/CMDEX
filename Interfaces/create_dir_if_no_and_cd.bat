@@ -1,4 +1,4 @@
-@echo off
+@echo off && call cmdex_pre_run.bat
 
 set REQUESTED_DIRECTORY="%*"
 set REQUESTED_DIRECTORY_WRAPPED="%REQUESTED_DIRECTORY:"=%"

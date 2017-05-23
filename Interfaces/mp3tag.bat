@@ -1,4 +1,4 @@
-@echo off
+@echo off && call cmdex_pre_run.bat
 
 if not exist "%CMDEX_ROOT_DIR%\Tools\Mp3tag\Mp3tag.exe" (call "%CMDEX_ROOT_DIR%\WinOpenInstaller\InstallScripts\mp3tag_install.bat" "%CMDEX_ROOT_DIR%\Tools")
 

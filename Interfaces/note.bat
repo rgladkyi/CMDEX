@@ -1,4 +1,4 @@
-@echo off
+@echo off && call cmdex_pre_run.bat
 
 :Start
 if [%1]==[] (goto SaveInNotepad) else (goto SaveAsCMDParams)

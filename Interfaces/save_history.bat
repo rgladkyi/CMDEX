@@ -1,4 +1,4 @@
-@echo off
+@echo off && call cmdex_pre_run.bat
 
 set CURRENT_HISTORY_FILE="%CMDEX_ROOT_DIR%\History\%DATE:/=_% %TIME::=_%.log"
 

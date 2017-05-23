@@ -1,4 +1,4 @@
-@echo off
+@echo off && call cmdex_pre_run.bat
 
 set DIR_TO_CHANGE=%1
 set CMD_TO_EXEC=%2 %3 %4 %5 %6 %7 %8 %9

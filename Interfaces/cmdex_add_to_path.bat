@@ -1,4 +1,4 @@
-rem @echo off
+rem @echo off && call cmdex_pre_run.bat
 
 rem call cmdex_remove_from_path
 

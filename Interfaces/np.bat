@@ -1,4 +1,4 @@
-@echo off
+@echo off && call cmdex_pre_run.bat
 
 if not exist "%CMDEX_ROOT_DIR%\Tools\Notepad++\notepad++.exe" (call "%CMDEX_ROOT_DIR%\WinOpenInstaller\InstallScripts\np_install.bat" "%CMDEX_ROOT_DIR%\Tools")
 

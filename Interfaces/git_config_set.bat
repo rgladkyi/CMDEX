@@ -1,4 +1,4 @@
-rem @echo off
+rem @echo off && call cmdex_pre_run.bat
 
 call git config --get-all %1
 pause
