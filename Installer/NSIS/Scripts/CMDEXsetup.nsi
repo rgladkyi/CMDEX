@@ -181,21 +181,21 @@ Section "CMDEX" SectionCMDEX
   WriteUninstaller "$INSTDIR\Uninstall.exe"
 
   ;---------- Bat filese to execute
-        
-        SetOutPath "$INSTDIR\Installer\TerminateRunningProcessesBeforeItsUpdate.bat"
-  File /r "$%CMDEX_ROOT_DIR%\Installer\TerminateRunningProcessesBeforeItsUpdate.bat"
-
-        SetOutPath "$INSTDIR\Interfaces\cmdex_add_settings_to_registry.bat"
-  File /r "$%CMDEX_ROOT_DIR%\Interfaces\cmdex_add_settings_to_registry.bat"
-
-        SetOutPath "$INSTDIR\Interfaces\cmdex_get_set_root_dir.bat"
-  File /r "$%CMDEX_ROOT_DIR%\Interfaces\cmdex_get_set_root_dir.bat"
-
-        SetOutPath "$INSTDIR\Interfaces\cmdex_add_to_path.bat"
-  File /r "$%CMDEX_ROOT_DIR%\Interfaces\cmdex_add_to_path.bat"
-
-        SetOutPath "$INSTDIR\Interfaces\cmdex_create_shortcuts.bat"
-  File /r "$%CMDEX_ROOT_DIR%\Interfaces\cmdex_create_shortcuts.bat"
+;        
+ ;       SetOutPath "$INSTDIR\Installer\TerminateRunningProcessesBeforeItsUpdate.bat"
+  ;File /r "$%CMDEX_ROOT_DIR%\Installer\TerminateRunningProcessesBeforeItsUpdate.bat"
+;
+ ;       SetOutPath "$INSTDIR\Interfaces\cmdex_add_settings_to_registry.bat"
+  ;File /r "$%CMDEX_ROOT_DIR%\Interfaces\cmdex_add_settings_to_registry.bat"
+;
+;        SetOutPath "$INSTDIR\Interfaces\cmdex_get_set_root_dir.bat"
+ ; File /r "$%CMDEX_ROOT_DIR%\Interfaces\cmdex_get_set_root_dir.bat"
+;
+ ;       SetOutPath "$INSTDIR\Interfaces\cmdex_add_to_path.bat"
+  ;File /r "$%CMDEX_ROOT_DIR%\Interfaces\cmdex_add_to_path.bat"
+;
+ ;       SetOutPath "$INSTDIR\Interfaces\cmdex_create_shortcuts.bat"
+  ;File /r "$%CMDEX_ROOT_DIR%\Interfaces\cmdex_create_shortcuts.bat"
 
   ExecWait '"$INSTDIR\Installer\TerminateRunningProcessesBeforeItsUpdate.bat"'
   ExecWait '"$INSTDIR\Interfaces\cmdex_add_settings_to_registry.bat" "$INSTDIR"'
