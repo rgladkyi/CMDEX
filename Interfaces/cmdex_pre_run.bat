@@ -6,7 +6,7 @@ goto Action
 
 :InitializeCMDEX
 call cmdex_get_set_root_dir.bat
-call cmdex_create_shortcuts.bat
+rem call cmdex_create_shortcuts.bat
 goto Action
 
 :Action

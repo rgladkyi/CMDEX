@@ -21,7 +21,7 @@ goto ReturnCMDEXRootDir
 
 :ReturnCMDEXRootDir
 rem set CMDEX_ROOT_DIR=%REG_CMDEX_ROOT_DIR%
-pause
+rem pause
 
 :End
 
