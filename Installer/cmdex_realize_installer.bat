@@ -1,4 +1,4 @@
-copy /y /v "C:\Program Files (x86)\NSIS\Examples\Modern UI\CMDEXsetup.exe" "%CMDEX_ROOT_DIR%\Release\"
+copy /y /v "%CMDEX_ROOT_DIR%\Installer\NSIS\Scripts\CMDEXsetup.exe" "%CMDEX_ROOT_DIR%\Release\"
 
 
 
