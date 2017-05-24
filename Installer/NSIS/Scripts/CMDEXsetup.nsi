@@ -1,5 +1,5 @@
 !define PRODUCT_NAME "CMDEX Preset"
-!define PRODUCT_VERSION "0.3.7"
+!define PRODUCT_VERSION "0.3.9"
 !define PRODUCT_PUBLISHER "Roman Gladkyi"
 !define PRODUCT_WEB_SITE "https://rgladkyi.github.io/CMDEX/"
 
