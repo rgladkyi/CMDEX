@@ -75,4 +75,4 @@ TestCases/indexate.bat
 
 POFC/
 
-Installer/NSIS/Scripts/CMDEXsetup.exe
+;Installer/NSIS/Scripts/CMDEXsetup.exe
