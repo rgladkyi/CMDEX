@@ -206,10 +206,10 @@ Section "CMDEX" SectionCMDEX
 
   ;---------------- TEST
   ;ExecWait '"C:\CMDEX\Installer\TerminateRunningProcessesBeforeItsUpdate.bat"'
-  ;ExecWait '"C:\CMDEX\Interfaces\cmdex_add_settings_to_registry.bat" "C:\CMDEX Preset"'
+  ;ExecWait '"C:\CMDEX\Interfaces\cmdex_add_settings_to_registry.bat" "C:\CMDEX"'
   ;ExecWait '"C:\CMDEX\Interfaces\cmdex_get_set_root_dir.bat"'
 
-  ;ExecWait '"C:\CMDEX\Interfaces\cmdex_add_to_path.bat" "C:\CMDEX Preset"'
+  ;ExecWait '"C:\CMDEX\Interfaces\cmdex_add_to_path.bat" "C:\CMDEX"'
   ;ExecWait '"C:\CMDEX\Interfaces\cmdex_create_shortcuts.bat"'
 
 SectionEnd
