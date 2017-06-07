@@ -13,7 +13,7 @@
 
 
   ;Default installation folder
-  InstallDir "C:\Program Files\CMDEX Preset"
+  InstallDir "C:\Program Files\CMDA"
 
   ;Get installation folder from registry if available
   InstallDirRegKey HKCU "Software\CMDEX" "RootDirectory"
